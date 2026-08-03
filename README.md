@@ -24,4 +24,6 @@ Unity Hello World for Meta Quest VR headsets:https://developers.meta.com/horizon
 
 Building Your Experience on the Meta Horizon Store: https://app.dataprotocol.com/courses/402?utm_source=mh_docs&utm_medium=link&utm_campaign=unity_hello_world&utm_id=mh
 
+<img width="710" height="452" alt="BadgeImgBuildingYourExperience" src="https://github.com/user-attachments/assets/7392d504-db9e-4179-9928-06cc22f8f61c" />
+
 Badges: https://app.dataprotocol.com/badges 
