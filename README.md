@@ -28,4 +28,6 @@ Building Your Experience on the Meta Horizon Store: https://app.dataprotocol.com
 
 <img width="554" height="492" alt="EarnBadgeImg" src="https://github.com/user-attachments/assets/9a0aa7ed-a112-4892-864f-a29279614f64" />
 
+<img width="1440" height="1332" alt="ResourcesList" src="https://github.com/user-attachments/assets/5e5294bc-4a08-4e5e-88c5-062f56fdd559" />
+
 Badges: https://app.dataprotocol.com/badges 
