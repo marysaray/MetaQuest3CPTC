@@ -5,6 +5,9 @@ public class FollowPlayer : MonoBehaviour
     // Add player object to the script
     public GameObject player;
 
+    // Create Vector3 offset to set the camera position relative to the player
+    private Vector3 offset = new Vector3(0, 5, -9);     
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +18,6 @@ public class FollowPlayer : MonoBehaviour
     void Update()
     {
         // Offset camera is set to follow the player by setting the position of the camera to the position of the player
-        transform.position = player.transform.position + new Vector3(0, 5, -9);
+        transform.position = player.transform.position + offset;
     }
 }
