@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     // create turn speed for the vehicle
     public float turnSpeed;
+    // Bind the arrow keys to the vehicle movement
+    public InputAction moveAction;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
