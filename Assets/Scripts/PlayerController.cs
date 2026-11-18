@@ -4,6 +4,8 @@ public class PlayerController : MonoBehaviour
 {
     // create speed for the vehicle
     public float speed = 5.0f;
+    // create turn speed for the vehicle
+    public float turnSpeed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,6 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         // Move the vehicle forward
         // transform.Translate(0, 0, 1); original code
-        transform.Translate(Vector3.forward * Time.deltaTime * speed); // slow vehicle down 
+        transform.Translate(Vector3.forward * Time.deltaTime * speed); // slow vehicle down
+        transform.Translate(Vector3.right * Time.deltaTime * turnSpeed); // turn the vehicle left and right
     }
 }
