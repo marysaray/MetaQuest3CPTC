@@ -3,35 +3,33 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    // Create speed for the vehicle
+    // Public fields: Movement tuning (editable in Inspector)
     public float speed = 5.0f;
-
-    // Create turn speed for the vehicle
     public float turnSpeed;
 
-    // Bind the arrow keys to the vehicle movement
+    // Input System action exposed in Inspector for binding (WASD/Arrow keys)
     public InputAction moveAction;
 
-    // Create display in Inspector to see key pressed during Game Mode
-    public Vector2 moveInput;
+    // Current input value (x = left/right, y = forward/back), kept private for internal use
+    private Vector2 moveInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Enable the input from keyboard to be used in the game
+        // Enable the MoveAction so it starts reading input
         moveAction.Enable(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Displays in the Inspector the key pressed during Game Mode
+        // Read the 2D vector from the MoveAction (x: horizontal, y:vertical) 
         moveInput = moveAction.ReadValue<Vector2>();
 
-        // Move the vehicle forward
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * moveInput.y); 
+        // Move forward/back along local Z using the y component
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * moveInput.y);
 
-        // turn the vehicle left and right
+        // Rotate around local Y (yaw) using the x component
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * moveInput.x); 
     }
 }
