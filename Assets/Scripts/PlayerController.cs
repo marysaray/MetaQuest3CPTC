@@ -29,8 +29,9 @@ public class PlayerController : MonoBehaviour
         moveInput = moveAction.ReadValue<Vector2>();
 
         // Move the vehicle forward
-        // transform.Translate(0, 0, 1); original code
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * moveInput.y); // slow vehicle down
-        transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * moveInput.x); // turn the vehicle left and right
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * moveInput.y); 
+
+        // turn the vehicle left and right
+        transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * moveInput.x); 
     }
 }
